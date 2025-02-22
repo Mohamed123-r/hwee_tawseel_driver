@@ -80,11 +80,16 @@ double getResponsiveScaleFactor(BuildContext context,
 
 double getScaleFactor(BuildContext context) {
   double width = MediaQuery.of(context).size.width;
-  if (width <= 1200) {
-    return width / 1750;
-  } else if (width <= 1400) {
-    return width / 1750;
+
+  if (width <= 600) {
+    // هذه هي حالة الأجهزة المحمولة، حيث عرض الشاشة عادة أقل من 600
+    return width / 400;  // تعديل نسبة المقياس للأجهزة الصغيرة
+  } else if (width <= 1200) {
+    // للأجهزة اللوحية أو الشاشات المتوسطة
+    return width / 1000;  // تعديل نسبة المقياس للأجهزة المتوسطة
   } else {
-    return width / 1750;
+    // للشاشات الأكبر من 1200 مثل شاشات الكمبيوتر
+    return width / 1750;  // نسبة مقياس الشاشات الكبيرة
   }
 }
+
