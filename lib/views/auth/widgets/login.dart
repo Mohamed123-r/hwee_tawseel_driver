@@ -4,6 +4,8 @@ import 'package:hwee_tawseel_driver/components/app_colors.dart';
 import 'package:hwee_tawseel_driver/components/app_form_filed.dart';
 import 'package:hwee_tawseel_driver/components/app_text_styles.dart';
 
+import '../forget_password_view.dart';
+
 class Login extends StatefulWidget {
   const Login({super.key});
 
@@ -65,7 +67,14 @@ class _LoginState extends State<Login> {
           ),
           SizedBox(height: 12),
           TextButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const ForgetPasswordView(),
+                ),
+              );
+            },
             child: Text("هل نسيت كلمة المرور؟",
                 style: AppTextStyles.style10W700(context).copyWith(
                   color: AppColors.accentColor,

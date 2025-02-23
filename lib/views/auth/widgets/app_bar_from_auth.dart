@@ -8,6 +8,8 @@ AppBar appBarFromAuth(BuildContext context) {
   return AppBar(
     backgroundColor: AppColors.white,
     elevation: 0,
+    leadingWidth: 0,
+    leading: SizedBox(),
     title: Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [

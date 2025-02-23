@@ -33,13 +33,7 @@ class AppInputTextFormField extends StatelessWidget {
         obscureText: obscureText ?? false,
         keyboardType: keyboardType ?? TextInputType.text,
         onChanged: onChanged,
-        validator: validator ??
-            (value) {
-              if (value == null || value.isEmpty) {
-                return 'Field is required';
-              }
-              return null;
-            },
+        validator: validator,
         decoration: InputDecoration(
           contentPadding:
               const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
@@ -75,7 +69,11 @@ OutlineInputBorder buildOutlineInputBorder() {
 
 class AppPassInputTextFormField extends StatefulWidget {
   const AppPassInputTextFormField(
-      {super.key, this.validator, required this.labelText, this.onChanged, this.controller});
+      {super.key,
+      this.validator,
+      required this.labelText,
+      this.onChanged,
+      this.controller});
 
   final String? Function(String?)? validator;
   final String labelText;
