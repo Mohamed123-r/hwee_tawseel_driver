@@ -29,7 +29,7 @@ class AppAlertDialog extends StatelessWidget {
       ),
       titlePadding: EdgeInsetsDirectional.all(16),
       content: SizedBox(
-        height: 100,
+        height: 120,
         width: 300,
         child: Column(
           mainAxisSize: MainAxisSize.min,

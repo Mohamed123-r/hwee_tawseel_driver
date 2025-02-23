@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hwee_tawseel_driver/components/app_button.dart';
 import 'package:hwee_tawseel_driver/components/app_form_filed.dart';
+import 'package:hwee_tawseel_driver/views/auth/register_view.dart';
 
 import '../../../components/app_text_styles.dart';
 
@@ -127,17 +128,16 @@ class _RegisterState extends State<Register> {
             height: 30,
           ),
           AppButton(
-            text: 'إنشاء الحساب',
+            text: 'التالي',
             onPressed: () {
               if (formstate.currentState!.validate()) {
                 setState(() {
                   _autovalidateMode = AutovalidateMode.always;
                 });
-                // بعد التحقق من صحة البيانات يمكن إجراء أي عملية (مثل التسجيل)
-              } else {
-                setState(() {
-                  _autovalidateMode = AutovalidateMode.always;
-                });
+                Navigator.push(context, MaterialPageRoute(builder:
+
+                (context) =>  RegisterView()));
+
               }
             },
           ),

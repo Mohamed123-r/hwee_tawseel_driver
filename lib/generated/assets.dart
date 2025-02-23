@@ -21,6 +21,7 @@ class Assets {
   static const String imagesOnboardingBackground1 = 'assets/images/OnboardingBackground1.png';
   static const String imagesOnboardingBackground2 = 'assets/images/OnboardingBackground2.png';
   static const String imagesOnboardingBackground3 = 'assets/images/OnboardingBackground3.png';
+  static const String imagesPhoto = 'assets/images/photo.svg';
   static const String imagesPress = 'assets/images/press.png';
   static const String imagesPress1 = 'assets/images/press1.png';
   static const String imagesPress2 = 'assets/images/press2.png';
