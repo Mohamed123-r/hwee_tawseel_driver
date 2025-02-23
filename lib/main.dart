@@ -4,6 +4,7 @@ import 'package:hwee_tawseel_driver/views/auth/auth_view.dart';
 import 'package:hwee_tawseel_driver/views/splash/splash_view.dart';
 
 import 'components/app_colors.dart';
+import 'views/home/home_view.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
@@ -30,7 +31,10 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Cairo',
         primaryColor: AppColors.textPrimary,
       ),
-      home: AuthView(),
+      home: Scaffold(
+        backgroundColor: AppColors.white ,
+        body: HomeView(),
+      ),
     );
   }
 }
