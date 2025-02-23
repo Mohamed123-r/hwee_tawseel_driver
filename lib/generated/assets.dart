@@ -12,6 +12,7 @@ class Assets {
   static const String fontsNotoKufiArabicSemiBold = 'assets/fonts/NotoKufiArabic-SemiBold.ttf';
   static const String fontsVEXA = 'assets/fonts/VEXA.ttf';
   static const String fontsVEXALight = 'assets/fonts/VEXA-light.ttf';
+  static const String imagesLogo = 'assets/images/logo.png';
   static const String imagesOnboarding1 = 'assets/images/Onboarding1.png';
   static const String imagesOnboarding2 = 'assets/images/Onboarding2.png';
   static const String imagesOnboarding3 = 'assets/images/Onboarding3.png';
@@ -22,5 +23,7 @@ class Assets {
   static const String imagesPress = 'assets/images/press.png';
   static const String imagesPress1 = 'assets/images/press1.png';
   static const String imagesPress2 = 'assets/images/press2.png';
+  static const String imagesShap1 = 'assets/images/shap1.png';
+  static const String imagesShap2 = 'assets/images/shap2.png';
 
 }
