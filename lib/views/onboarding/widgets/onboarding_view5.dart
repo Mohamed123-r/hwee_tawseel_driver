@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hwee_tawseel_driver/components/app_colors.dart';
 import 'package:hwee_tawseel_driver/components/app_text_styles.dart';
 import 'package:hwee_tawseel_driver/generated/assets.dart';
+import 'package:hwee_tawseel_driver/views/auth/auth_view.dart';
 
 import 'button_of_onboarding.dart';
 
@@ -214,12 +215,12 @@ class OnboardingView5 extends StatelessWidget {
                   titleColor: AppColors.white,
                   title: "ابدأ",
                   onPressed: () {
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(
-                    //     builder: (context) => const HomeView(),
-                    //   ),
-                    // );
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const AuthView(),
+                      ),
+                    );
                   },
                 ),
               ],

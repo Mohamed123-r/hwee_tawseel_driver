@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:hwee_tawseel_driver/views/auth/auth_view.dart';
 import 'package:hwee_tawseel_driver/views/splash/splash_view.dart';
 
 import 'components/app_colors.dart';
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Cairo',
         primaryColor: AppColors.textPrimary,
       ),
-      home: SplashView(),
+      home: AuthView(),
     );
   }
 }
