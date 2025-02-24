@@ -13,7 +13,7 @@ class HomeViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(16.0),
+      padding: const EdgeInsets.symmetric(horizontal: 16.0),
       child: Column(
         children: [
           Row(children: [
@@ -44,13 +44,13 @@ class HomeViewBody extends StatelessWidget {
                         Text(
                           "13",
                           style: AppTextStyles.style16W400(context)
-                              .copyWith(fontFamily: "Noto Kufi Arabic"),
+                              .copyWith(fontFamily: "Lemonada"),
                         ),
                         Text(
                           " طلب توصيل",
-                          style: AppTextStyles.style12W700(context).copyWith(
+                          style: AppTextStyles.style12W500(context).copyWith(
                               color: AppColors.greenWhite,
-                              fontFamily: "Noto Kufi Arabic"),
+                              fontFamily: "Lemonada"),
                         ),
                       ],
                     ),
@@ -88,13 +88,13 @@ class HomeViewBody extends StatelessWidget {
                         Text(
                           "1333",
                           style: AppTextStyles.style16W400(context)
-                              .copyWith(fontFamily: "Noto Kufi Arabic"),
+                              .copyWith(fontFamily: "Lemonada"),
                         ),
                         Text(
                           " ريال سعودي",
-                          style: AppTextStyles.style12W700(context).copyWith(
+                          style: AppTextStyles.style12W500(context).copyWith(
                               color: AppColors.greenWhite,
-                              fontFamily: "Noto Kufi Arabic"),
+                              fontFamily: "Lemonada"),
                         ),
                       ],
                     ),
@@ -152,6 +152,14 @@ class HomeViewBody extends StatelessWidget {
                 ),
               )
             ]),
+          ),
+          SizedBox(height: 10),
+          ItemHome(
+            status: "المملكة العربية السعودية",
+          ),
+          SizedBox(height: 10),
+          ItemHome(
+            status: "المملكة العربية السعودية",
           ),
           SizedBox(height: 10),
           ItemHome(
