@@ -6,6 +6,11 @@ class Assets {
   static const String fontsCairoMedium = 'assets/fonts/Cairo-Medium.ttf';
   static const String fontsCairoRegular = 'assets/fonts/Cairo-Regular.ttf';
   static const String fontsCairoSemiBold = 'assets/fonts/Cairo-SemiBold.ttf';
+  static const String fontsLemonadaBold = 'assets/fonts/Lemonada-Bold.ttf';
+  static const String fontsLemonadaLight = 'assets/fonts/Lemonada-Light.ttf';
+  static const String fontsLemonadaMedium = 'assets/fonts/Lemonada-Medium.ttf';
+  static const String fontsLemonadaRegular = 'assets/fonts/Lemonada-Regular.ttf';
+  static const String fontsLemonadaSemiBold = 'assets/fonts/Lemonada-SemiBold.ttf';
   static const String fontsNotoKufiArabicBold = 'assets/fonts/NotoKufiArabic-Bold.ttf';
   static const String fontsNotoKufiArabicMedium = 'assets/fonts/NotoKufiArabic-Medium.ttf';
   static const String fontsNotoKufiArabicRegular = 'assets/fonts/NotoKufiArabic-Regular.ttf';
@@ -15,6 +20,8 @@ class Assets {
   static const String imagesBell = 'assets/images/bell.svg';
   static const String imagesBox = 'assets/images/box.png';
   static const String imagesBox2 = 'assets/images/box2.svg';
+  static const String imagesCamera = 'assets/images/Camera.svg';
+  static const String imagesEdit = 'assets/images/edit.svg';
   static const String imagesError = 'assets/images/error.png';
   static const String imagesHeadset = 'assets/images/Headset.svg';
   static const String imagesLogo = 'assets/images/logo.png';
@@ -33,6 +40,7 @@ class Assets {
   static const String imagesShap1 = 'assets/images/shap1.png';
   static const String imagesShap2 = 'assets/images/shap2.png';
   static const String imagesShapes = 'assets/images/shapes.png';
+  static const String imagesSignOut = 'assets/images/SignOut.svg';
   static const String imagesSuccess = 'assets/images/success.png';
   static const String imagesTest1 = 'assets/images/test1.png';
   static const String imagesUser = 'assets/images/User.svg';
