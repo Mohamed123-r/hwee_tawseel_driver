@@ -5,6 +5,7 @@ import 'package:hwee_tawseel_driver/components/app_colors.dart';
 import 'package:hwee_tawseel_driver/components/app_text_styles.dart';
 import 'package:hwee_tawseel_driver/generated/assets.dart';
 import 'package:hwee_tawseel_driver/views/home/home_view.dart';
+import 'package:hwee_tawseel_driver/views/profile/profile_view.dart';
 
 import 'bottom_nav_btn.dart';
 import 'clipper.dart';
@@ -62,125 +63,120 @@ class MainViewState extends State<MainView> {
         leading: SizedBox(),
         elevation: 0,
         backgroundColor: AppColors.white,
-        title: Visibility(
-          visible: _currentIndex !=0,
-          child: Directionality(
-            textDirection: TextDirection.rtl,
-            child: Row(
-              spacing: 8,
-              children: [
-                Container(
-                  height: 48,
-                  padding: EdgeInsets.only(right: 2,left: 24),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(50),
-                    border: Border.all(
-                      width: 1,
-                      color: AppColors.greenWhite,
-                    ),
+        title: Directionality(
+          textDirection: TextDirection.rtl,
+          child: Row(
+            spacing: 8,
+            children: [
+              Container(
+                height: 48,
+                padding: EdgeInsets.only(right: 2, left: 24),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(50),
+                  border: Border.all(
+                    width: 1,
+                    color: AppColors.greenWhite,
                   ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Container(
-                        width: 44,
-                        height: 44,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Container(
+                      width: 44,
+                      height: 44,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                      ),
+                      child: Image.asset(Assets.imagesTest1),
+                    ),
+                    SizedBox(width: 8),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "مرحبا",
+                          style: AppTextStyles.style10W500(context).copyWith(
+                            color: AppColors.greenWhite,
+                          ),
                         ),
-                        child: Image.asset(Assets.imagesTest1),
-                      ),
-                      SizedBox(width: 8),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            "مرحبا",
-                            style: AppTextStyles.style10W500(context).copyWith(
-                              color: AppColors.greenWhite,
-                            ),
-                          ),
-                          SizedBox(
-                            height: 4,
-                          ),
-                          Text(
-                            "محمد علي عبد القادر",
-                            style: AppTextStyles.style10W500(context)
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-                Spacer(),
-                Container(
-                  width: 40,
-                  height: 40,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Color(0xFFF9F9F9),
-                  ),
-                  child: Center(
-                    child: SvgPicture.asset(
-                      Assets.imagesBell,
-                      width: 20,
+                        SizedBox(
+                          height: 4,
+                        ),
+                        Text("محمد علي عبد القادر",
+                            style: AppTextStyles.style10W500(context)),
+                      ],
                     ),
+                  ],
+                ),
+              ),
+              Spacer(),
+              Container(
+                width: 40,
+                height: 40,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Color(0xFFF9F9F9),
+                ),
+                child: Center(
+                  child: SvgPicture.asset(
+                    Assets.imagesBell,
+                    width: 20,
                   ),
                 ),
-                Container(
-                  width: 40,
-                  height: 40,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Color(0xFFF9F9F9),
-                  ),
-                  child: Center(
-                      child: Text(
-                    "AR",
-                    style: AppTextStyles.style10W500(context),
-                  )),
+              ),
+              Container(
+                width: 40,
+                height: 40,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Color(0xFFF9F9F9),
                 ),
-                Container(
-                  width: 40,
-                  height: 40,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                  ),
-                  child: Center(
-                    child: Image.asset(Assets.imagesLogo),
-                  ),
+                child: Center(
+                    child: Text(
+                  "AR",
+                  style: AppTextStyles.style10W500(context),
+                )),
+              ),
+              Container(
+                width: 40,
+                height: 40,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
                 ),
-              ],
-            ),
+                child: Center(
+                  child: Image.asset(Assets.imagesLogo),
+                ),
+              ),
+            ],
           ),
         ),
         actions: [],
       ),
-      body: Stack(
-        children: [
-          Positioned.fill(
-            child: PageView(
-              onPageChanged: (value) {
-                setState(() {
-                  _currentIndex = value;
-                });
-              },
-              controller: pageController,
-              physics: const NeverScrollableScrollPhysics(),
-              children: [
-                Container(
-                  color: Colors.white,
-                ),
-                Container(
-                  color: Colors.yellow,
-                ),
-                const HomeView(),
-
-              ],
+      body: Directionality(
+        textDirection: TextDirection.rtl,
+        child: Stack(
+          children: [
+            Positioned.fill(
+              child: PageView(
+                onPageChanged: (value) {
+                  setState(() {
+                    _currentIndex = value;
+                  });
+                },
+                controller: pageController,
+                physics: const NeverScrollableScrollPhysics(),
+                children: [
+                  HomeView(),
+                  Container(
+                    color: Colors.yellow,
+                  ),
+                  ProfileView(),
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
@@ -217,9 +213,8 @@ class MainViewState extends State<MainView> {
                       },
                       icon: Assets.imagesBox2,
                       currentIndex: _currentIndex,
-                      index:2,
+                      index: 0,
                     ),
-
                     BottomNavBTN(
                       title: "المحفظة",
                       onPressed: (val) {
@@ -236,7 +231,7 @@ class MainViewState extends State<MainView> {
                       },
                       icon: Assets.imagesUser,
                       currentIndex: _currentIndex,
-                      index: 0,
+                      index: 2,
                     ),
                   ],
                 ),
@@ -290,11 +285,11 @@ final List<Color> gradient = [
 double animatedPositionedLEftValue(int currentIndex) {
   switch (currentIndex) {
     case 0:
-      return AppSizes.blockSizeHorizontal * 11;
+      return AppSizes.blockSizeHorizontal * 68.5;
     case 1:
       return AppSizes.blockSizeHorizontal * 40;
     case 2:
-      return AppSizes.blockSizeHorizontal * 68.5;
+      return AppSizes.blockSizeHorizontal * 11;
     default:
       return 0;
   }
