@@ -5,6 +5,7 @@ import 'package:hwee_tawseel_driver/components/app_colors.dart';
 import 'package:hwee_tawseel_driver/components/app_text_styles.dart';
 import 'package:hwee_tawseel_driver/generated/assets.dart';
 import 'package:hwee_tawseel_driver/views/home/home_view.dart';
+import 'package:hwee_tawseel_driver/views/notifications/notifications_view.dart';
 import 'package:hwee_tawseel_driver/views/profile/profile_view.dart';
 
 import 'bottom_nav_btn.dart';
@@ -111,17 +112,28 @@ class MainViewState extends State<MainView> {
                 ),
               ),
               Spacer(),
-              Container(
-                width: 40,
-                height: 40,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: Color(0xFFF9F9F9),
-                ),
-                child: Center(
-                  child: SvgPicture.asset(
-                    Assets.imagesBell,
-                    width: 20,
+              GestureDetector(
+                onTap: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) =>
+                           NotificationsView(),
+                    ),
+                  );
+                },
+                child: Container(
+                  width: 40,
+                  height: 40,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Color(0xFFF9F9F9),
+                  ),
+                  child: Center(
+                    child: SvgPicture.asset(
+                      Assets.imagesBell,
+                      width: 20,
+                    ),
                   ),
                 ),
               ),
