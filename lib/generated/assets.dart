@@ -12,9 +12,11 @@ class Assets {
   static const String fontsNotoKufiArabicSemiBold = 'assets/fonts/NotoKufiArabic-SemiBold.ttf';
   static const String fontsVEXA = 'assets/fonts/VEXA.ttf';
   static const String fontsVEXALight = 'assets/fonts/VEXA-light.ttf';
+  static const String imagesBell = 'assets/images/bell.svg';
   static const String imagesBox = 'assets/images/box.png';
   static const String imagesBox2 = 'assets/images/box2.svg';
   static const String imagesError = 'assets/images/error.png';
+  static const String imagesHeadset = 'assets/images/Headset.svg';
   static const String imagesLogo = 'assets/images/logo.png';
   static const String imagesOnboarding1 = 'assets/images/Onboarding1.png';
   static const String imagesOnboarding2 = 'assets/images/Onboarding2.png';
@@ -24,6 +26,7 @@ class Assets {
   static const String imagesOnboardingBackground2 = 'assets/images/OnboardingBackground2.png';
   static const String imagesOnboardingBackground3 = 'assets/images/OnboardingBackground3.png';
   static const String imagesPhoto = 'assets/images/photo.svg';
+  static const String imagesPlus = 'assets/images/Plus.svg';
   static const String imagesPress = 'assets/images/press.png';
   static const String imagesPress1 = 'assets/images/press1.png';
   static const String imagesPress2 = 'assets/images/press2.png';
@@ -31,5 +34,8 @@ class Assets {
   static const String imagesShap2 = 'assets/images/shap2.png';
   static const String imagesShapes = 'assets/images/shapes.png';
   static const String imagesSuccess = 'assets/images/success.png';
+  static const String imagesTest1 = 'assets/images/test1.png';
+  static const String imagesUser = 'assets/images/User.svg';
+  static const String imagesWallet = 'assets/images/Wallet.svg';
 
 }
