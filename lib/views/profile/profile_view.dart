@@ -5,7 +5,7 @@ import 'package:hwee_tawseel_driver/components/app_colors.dart';
 import 'package:hwee_tawseel_driver/components/app_text_styles.dart';
 
 import '../../generated/assets.dart';
-import 'edit_profile_view.dart';
+import '../editProfile/edit_profile_view.dart';
 import 'widgets/profile_item.dart';
 
 class ProfileView extends StatelessWidget {

@@ -50,7 +50,8 @@ class _RegisterViewState extends State<RegisterView> {
                 fontFamily: 'Noto Kufi Arabic',
               ),
             ),
-            Spacer(), SvgPicture.asset(
+            Spacer(),
+            Image.asset(
               Assets.imagesPhoto,
               width: 32,
               height: 32,
@@ -136,21 +137,20 @@ class _RegisterViewState extends State<RegisterView> {
           _buildUploadCard("أدخل صورة رخصة السيارة"),
           _buildUploadCard("أدخل صورة رخصة القيادة"),
           SizedBox(height: 40),
-          AppButton(text: "التالي", onPressed: () {
-            setState(() {
-
-              showDialog(
-                context: context,
-                builder: (context) => AppAlertDialog(
-                  title:
-                  'تم إنشاء الحساب بنجاح في إنتظار الموافقة علي طلب إنضمامك',
-                  isSuccess: true,
-                ),
-              );
-
-            });
-          },
-
+          AppButton(
+            text: "التالي",
+            onPressed: () {
+              setState(() {
+                showDialog(
+                  context: context,
+                  builder: (context) => AppAlertDialog(
+                    title:
+                        'تم إنشاء الحساب بنجاح في إنتظار الموافقة علي طلب إنضمامك',
+                    isSuccess: true,
+                  ),
+                );
+              });
+            },
           ),
         ],
       ),

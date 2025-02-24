@@ -161,6 +161,13 @@ class _ForgetPasswordViewState extends State<ForgetPasswordView> {
                                 , isSuccess: true,
                               ),
                             );
+                            showDialog(
+                              context: context,
+                              builder: (context) => AppAlertDialog(
+                                title: 'حدثت مشكلة أثناء التسجيل حاول مرة أخري لاحقا'
+                                , isSuccess: false,
+                              ),
+                            );
                           }
                         });
                       }
