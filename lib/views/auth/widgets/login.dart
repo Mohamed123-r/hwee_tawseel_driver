@@ -3,6 +3,7 @@ import 'package:hwee_tawseel_driver/components/app_button.dart';
 import 'package:hwee_tawseel_driver/components/app_colors.dart';
 import 'package:hwee_tawseel_driver/components/app_form_filed.dart';
 import 'package:hwee_tawseel_driver/components/app_text_styles.dart';
+import 'package:hwee_tawseel_driver/views/main/main_view.dart';
 
 import '../forget_password_view.dart';
 
@@ -92,10 +93,9 @@ class _LoginState extends State<Login> {
                 setState(() {
                   _autovalidateMode = AutovalidateMode.always;
                 });
-              } else {
-                setState(() {
-                  _autovalidateMode = AutovalidateMode.always;
-                });
+                Navigator.push(context, MaterialPageRoute(builder:
+
+                    (context) =>  MainView()));
               }
             },
           ),

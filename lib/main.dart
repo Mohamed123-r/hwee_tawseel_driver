@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         backgroundColor: AppColors.white ,
-        body: MainView(),
+        body: AuthView(),
       ),
     );
   }

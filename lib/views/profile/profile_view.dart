@@ -5,6 +5,7 @@ import 'package:hwee_tawseel_driver/components/app_colors.dart';
 import 'package:hwee_tawseel_driver/components/app_text_styles.dart';
 
 import '../../generated/assets.dart';
+import 'edit_profile_view.dart';
 import 'widgets/profile_item.dart';
 
 class ProfileView extends StatelessWidget {
@@ -77,13 +78,13 @@ class ProfileView extends StatelessWidget {
                         SizedBox(width: 8),
                         GestureDetector(
                           onTap: () {
-                            // Navigator.push(
-                            //   context,
-                            //   MaterialPageRoute(
-                            //     builder: (context) =>
-                            //         const EditProfileView(),
-                            //   ),
-                            // );
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    const EditProfileView(),
+                              ),
+                            );
                           },
                           child: Container(
                             width: 24,
