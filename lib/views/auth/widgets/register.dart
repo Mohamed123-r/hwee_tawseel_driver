@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:hwee_tawseel_driver/components/app_button.dart';
+import 'package:hwee_tawseel_driver/components/app_colors.dart';
 import 'package:hwee_tawseel_driver/components/app_form_filed.dart';
+import 'package:hwee_tawseel_driver/generated/assets.dart';
+import 'package:hwee_tawseel_driver/views/auth/location_view.dart';
 import 'package:hwee_tawseel_driver/views/auth/register_view.dart';
 
 import '../../../components/app_text_styles.dart';
@@ -88,6 +92,43 @@ class _RegisterState extends State<Register> {
             },
           ),
           SizedBox(height: 16),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => LocationView(),
+                ),
+              );
+            },
+            child: Container(
+              height: 56,
+              width: double.infinity,
+              padding: EdgeInsets.symmetric(
+                horizontal: 16,
+              ),
+              decoration: BoxDecoration(
+                border: Border.all(
+                  color: AppColors.border,
+                ),
+                borderRadius: BorderRadius.all(Radius.circular(18)),
+              ),
+              child: Row(children: [
+                Image.asset(
+                  Assets.imagesGoogleMaps,
+                  width: 16,
+                  height: 16,
+                ),
+                Spacer(),
+                Text(
+                  "الموقع",
+                  style: AppTextStyles.style12W700(context).copyWith(
+                      color: AppColors.border, fontFamily: "Noto Kufi Arabic"),
+                ),
+              ]),
+            ),
+          ),
+          SizedBox(height: 16),
           AppPassInputTextFormField(
             controller: passwordController,
             labelText: "كلمة المرور",
@@ -134,10 +175,8 @@ class _RegisterState extends State<Register> {
                 setState(() {
                   _autovalidateMode = AutovalidateMode.always;
                 });
-                Navigator.push(context, MaterialPageRoute(builder:
-
-                (context) =>  RegisterView()));
-
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => RegisterView()));
               }
             },
           ),

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:hwee_tawseel_driver/components/app_alert_dialog.dart';
 import 'package:hwee_tawseel_driver/components/app_button.dart';
 import 'package:hwee_tawseel_driver/components/app_colors.dart';
 import 'package:hwee_tawseel_driver/components/app_text_styles.dart';
 import 'package:hwee_tawseel_driver/generated/assets.dart';
-import 'package:hwee_tawseel_driver/views/auth/edit_location_view.dart';
+import 'package:hwee_tawseel_driver/views/auth/location_view.dart';
 import 'package:hwee_tawseel_driver/views/auth/widgets/app_bar_from_auth.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -136,13 +137,18 @@ class _RegisterViewState extends State<RegisterView> {
           _buildUploadCard("أدخل صورة رخصة القيادة"),
           SizedBox(height: 40),
           AppButton(text: "التالي", onPressed: () {
-            Navigator.push(
+            setState(() {
 
-              context,
-              MaterialPageRoute(
-                builder: (context) =>  EditLocationView(),
-              ),
-            );
+              showDialog(
+                context: context,
+                builder: (context) => AppAlertDialog(
+                  title:
+                  'تم إنشاء الحساب بنجاح في إنتظار الموافقة علي طلب إنضمامك',
+                  isSuccess: true,
+                ),
+              );
+
+            });
           },
 
           ),
