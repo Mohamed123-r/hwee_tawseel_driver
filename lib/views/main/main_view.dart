@@ -8,6 +8,7 @@ import 'package:hwee_tawseel_driver/views/home/home_view.dart';
 import 'package:hwee_tawseel_driver/views/notifications/notifications_view.dart';
 import 'package:hwee_tawseel_driver/views/profile/profile_view.dart';
 
+import '../wallet/wallwt_view.dart';
 import 'bottom_nav_btn.dart';
 import 'clipper.dart';
 import 'size_config.dart';
@@ -180,9 +181,7 @@ class MainViewState extends State<MainView> {
                 physics: const NeverScrollableScrollPhysics(),
                 children: [
                   HomeView(),
-                  Container(
-                    color: Colors.yellow,
-                  ),
+                  WalletView(),
                   ProfileView(),
                 ],
               ),

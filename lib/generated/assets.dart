@@ -24,8 +24,10 @@ class Assets {
   static const String imagesEdit = 'assets/images/edit.svg';
   static const String imagesError = 'assets/images/error.png';
   static const String imagesGoogleMaps = 'assets/images/google-maps.png';
+  static const String imagesGroupCart = 'assets/images/GroupCart.png';
   static const String imagesHeadset = 'assets/images/Headset.svg';
   static const String imagesLogo = 'assets/images/logo.png';
+  static const String imagesNoiseBackground = 'assets/images/noiseBackground.png';
   static const String imagesOnboarding1 = 'assets/images/Onboarding1.png';
   static const String imagesOnboarding2 = 'assets/images/Onboarding2.png';
   static const String imagesOnboarding3 = 'assets/images/Onboarding3.png';
@@ -41,6 +43,7 @@ class Assets {
   static const String imagesShap1 = 'assets/images/shap1.png';
   static const String imagesShap2 = 'assets/images/shap2.png';
   static const String imagesShapes = 'assets/images/shapes.png';
+  static const String imagesShapesCards = 'assets/images/shapes_cards.png';
   static const String imagesSignOut = 'assets/images/SignOut.svg';
   static const String imagesSuccess = 'assets/images/success.png';
   static const String imagesTest1 = 'assets/images/test1.png';
